@@ -8,6 +8,7 @@ import useMovieList from "@/hooks/useMovieList";
 import useFavorites from "@/hooks/useFavorites";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
+import Head from "next/head";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -33,6 +34,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>juanvarela-netflix</title>
+      </Head>
       <InfoModal visible={ isOpen } onClose={ closeModal } />
 
       <Navbar />
