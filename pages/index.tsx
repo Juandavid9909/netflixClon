@@ -36,6 +36,7 @@ export default function Home() {
     <>
       <Head>
         <title>juanvarela-netflix</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
       <InfoModal visible={ isOpen } onClose={ closeModal } />
 
